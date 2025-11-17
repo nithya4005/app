@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NanoBanana Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍌 NanoBanana Image Generator</h1>
+            <p>Enter a prompt to generate an image</p>
+        </header>
+
+        <main>
+            <form id="imageForm" class="prompt-form">
+                <div class="input-group">
+                    <label for="prompt">Your Prompt:</label>
+                    <textarea 
+                        id="prompt" 
+                        name="prompt" 
+                        placeholder="Describe the image you want to generate..."
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+                <button type="submit" id="generateBtn" class="generate-btn">
+                    <span class="btn-text">Generate Image</span>
+                    <span class="btn-loader" style="display: none;">Generating...</span>
+                </button>
+            </form>
+
+            <div id="result" class="result-container" style="display: none;">
+                <div class="result-header">
+                    <h2>Generated Image</h2>
+                    <button id="closeBtn" class="close-btn">&times;</button>
+                </div>
+                <div class="image-container">
+                    <img id="generatedImage" src="" alt="Generated image">
+                </div>
+                <div class="prompt-display">
+                    <strong>Prompt:</strong> <span id="promptDisplay"></span>
+                </div>
+            </div>
+
+            <div id="error" class="error-message" style="display: none;"></div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
